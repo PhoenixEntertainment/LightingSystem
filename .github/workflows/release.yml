@@ -22,7 +22,7 @@ jobs:
 
     - name: Build system components
       run: |
-        rojo build Client/standalone.project.json --output Temp/SystemName_Client.rbxm
+        rojo build Client/standalone.project.json --output LightingSystem_Client.rbxm
 
     - name: Create release
       id: create_release
@@ -40,6 +40,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: Temp/SystemName_Client.rbxm
+        asset_path: Temp/LightingSystem_Client.rbxm
         asset_name: SystemName_Client_${{ github.ref_name }}.rbxm
         asset_content_type: application/octet-stream
