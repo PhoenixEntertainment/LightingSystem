@@ -1,6 +1,6 @@
 [package]
-name = "phoenixentertainment/systemname-client"
-description = "Client side of some system"
+name = "phoenixentertainment/lightingsystem-client"
+description = "Lighting system client"
 version = "0.0.0-test.1"
 authors = ["Noble_Draconian"]
 realm = "shared"

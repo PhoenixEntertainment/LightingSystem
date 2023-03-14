@@ -1,5 +1,5 @@
 {
-	"name" : "systemname-client_testenv",
+	"name" : "lightingsystem-client_testenv",
 	"tree" : {
 		"$className" : "DataModel",
 

@@ -1,7 +1,0 @@
-{
-	"name" : "systemname-server",
-	
-	"tree" : {
-		"$path" : "src"
-	}
-}

@@ -1,5 +1,5 @@
 {
-	"name" : "systemname-client",
+	"name" : "lightingsystem-client",
 	
 	"tree" : {
 		"$path" : "src"
