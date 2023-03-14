@@ -18,12 +18,10 @@ jobs:
     
     - name: Install dependencies
       run: |
-        wally install --project-path Server/
         wally install --project-path Client/
 
     - name: Build system components
       run: |
-        rojo build Server/standalone.project.json --output Temp/SystemName_Server.rbxm
         rojo build Client/standalone.project.json --output Temp/SystemName_Client.rbxm
 
     - name: Create release
@@ -35,16 +33,6 @@ jobs:
         tag_name: ${{ github.ref }}
         release_name: ${{ github.ref }}
         draft: true
-    
-    - name: Upload system server component
-      uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: Temp/SystemName_Server.rbxm
-        asset_name: SystemName_Server_${{ github.ref_name }}.rbxm
-        asset_content_type: application/octet-stream
 
     - name: Upload system client component
       uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5
