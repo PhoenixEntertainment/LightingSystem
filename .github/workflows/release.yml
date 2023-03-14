@@ -41,5 +41,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: Temp/LightingSystem_Client.rbxm
-        asset_name: SystemName_Client_${{ github.ref_name }}.rbxm
+        asset_name: LightingSystem_Client_${{ github.ref_name }}.rbxm
         asset_content_type: application/octet-stream
